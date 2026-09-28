@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>988</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Nausica - Application Lifecycle Manager System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="centralLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_project">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>220</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>List of Project</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="tab3Layout" stretch="1,0">
+        <item>
+         <layout class="QVBoxLayout" name="tab3ListLayout">
+          <item>
+           <widget class="QListView" name="listView_project">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>121</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>150</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="tab3ButtonsLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton_openFeedback">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Feedback + CR + Bugfix</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_timesheetReminder">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="timeReminderRowLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="checkBox_enableTimeRecording">
+               <property name="text">
+                <string></string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_timesheetReminder">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>Remind Me at 5:00 PM and Enable Nausica to Record Hour Spend on Project(s)</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::RichText</enum>
+               </property>
+               <property name="openExternalLinks">
+                <bool>false</bool>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt.TextSelectableByMouse | Qt.LinksAccessibleByMouse</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_checkHourSpend">
+            <property name="text">
+             <string>Check Hour Spend Note</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_openTimeSheet">
+            <property name="text">
+             <string>Fill Up 'Click Up' Timesheet</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Configuration</string>
+       </attribute>
+       <layout class="QGridLayout" name="tab4Layout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Project Name:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTextEdit" name="textEdit_projectName">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_saveProjectConfiguration">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Project Root Directory:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTextEdit" name="textEdit_TestCaseRootDir">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="tab4BrowseLayout1">
+          <item>
+           <widget class="QPushButton" name="pushButton_browseProjectDir">
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_openProjectDirInExplorer">
+            <property name="text">
+             <string>Open</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Source Code Root Directory:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTextEdit" name="textEdit_SourceRootDir">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <layout class="QVBoxLayout" name="tab4BrowseLayout2">
+          <item>
+           <widget class="QPushButton" name="pushButton_browseSourceRootDir">
+            <property name="text">
+             <string>Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_openSourceCodeInVSCode">
+            <property name="text">
+             <string>Open</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_selectedProject">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Selected Project</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTreeView" name="treeView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>988</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Thesis</string>
+    </property>
+    <addaction name="actionLinux_Philosphy"/>
+    <addaction name="actionModern_Engineering_Philosophy"/>
+    <addaction name="actionWrapper_Architecture"/>
+    <addaction name="actionTraceability"/>
+   </widget>
+   <widget class="QMenu" name="menuDDMan_Web_AI">
+    <property name="title">
+     <string>AI</string>
+    </property>
+    <addaction name="actionOpen_WebUI"/>
+    <addaction name="actionServer_Dashboard"/>
+   </widget>
+   <widget class="QMenu" name="menuWhat_is_ALM">
+    <property name="title">
+     <string>What is Nausica ALM?</string>
+    </property>
+    <addaction name="actionWhat_is_ALM"/>
+   </widget>
+   <widget class="QMenu" name="menuVSCode">
+    <property name="title">
+     <string>VSCode Plugin</string>
+    </property>
+    <addaction name="actionSetup_Continue_2"/>
+    <addaction name="actionSetup_Markdown_2"/>
+    <addaction name="actionSetup_Draw_IO_Integration"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDDMan_Web_AI"/>
+   <addaction name="menuWhat_is_ALM"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuVSCode"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="text">
+    <string>Configuration</string>
+   </property>
+  </action>
+  <action name="actionOpen_WebUI">
+   <property name="text">
+    <string>Open WebUI</string>
+   </property>
+  </action>
+  <action name="actionServer_Dashboard">
+   <property name="text">
+    <string>Server Dashboard</string>
+   </property>
+  </action>
+  <action name="actionSetup_Continue">
+   <property name="text">
+    <string>Setup Continue</string>
+   </property>
+  </action>
+  <action name="actionSetup_Markdown">
+   <property name="text">
+    <string>Setup Markdown</string>
+   </property>
+  </action>
+  <action name="actionWhat_is_ALM">
+   <property name="text">
+    <string>What is Nausica ALM?</string>
+   </property>
+  </action>
+  <action name="actionSetup_Continue_2">
+   <property name="text">
+    <string>Setup Continue</string>
+   </property>
+  </action>
+  <action name="actionSetup_Markdown_2">
+   <property name="text">
+    <string>Setup Markdown</string>
+   </property>
+  </action>
+  <action name="actionSetup_Draw_IO_Integration">
+   <property name="text">
+    <string>Setup Draw IO Integration</string>
+   </property>
+  </action>
+  <action name="actionLinux_Philosphy">
+   <property name="text">
+    <string>Parallel with Linux Philosphy</string>
+   </property>
+  </action>
+  <action name="actionModern_Engineering_Philosophy">
+   <property name="text">
+    <string>ASPICE in Modern Software Engineering </string>
+   </property>
+  </action>
+  <action name="actionNausica_Philosophy">
+   <property name="text">
+    <string>Nausica Philosophy</string>
+   </property>
+  </action>
+  <action name="actionWrapper_Architecture">
+   <property name="text">
+    <string>Hexagonal Architecture</string>
+   </property>
+  </action>
+  <action name="actionFull_View">
+   <property name="text">
+    <string>Full View</string>
+   </property>
+  </action>
+  <action name="actionBasic_View">
+   <property name="text">
+    <string>Basic View</string>
+   </property>
+  </action>
+  <action name="actionTraceability">
+   <property name="text">
+    <string>Traceability Implementation Guide</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
